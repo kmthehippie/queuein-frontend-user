@@ -1,0 +1,50 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Home component > renders Home 1`] = `
+<div>
+  <div>
+    <header>
+      <div
+        class="left"
+      >
+        <h1>
+           
+          Home
+           
+        </h1>
+      </div>
+      <div
+        class="right"
+      >
+        <p>
+          Login
+        </p>
+        <p>
+          Sign Up
+        </p>
+      </div>
+    </header>
+    <div>
+      <div>
+        Write a bunch of good stuff about my app here!
+      </div>
+      <div>
+        Some psycho actually liked my app! Here are the reviews!
+      </div>
+      <div>
+        Some other additional info about my app! Like, it's free except for the database you are using!
+      </div>
+      <button
+        type="button"
+      >
+        Sign Up!
+      </button>
+    </div>
+    <footer>
+      <small>
+        Some copyright secret small stuff here
+      </small>
+    </footer>
+  </div>
+</div>
+`;
