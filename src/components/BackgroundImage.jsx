@@ -4,6 +4,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 const BackgroundImageComponent = () => {
   const isSmallScreen = useMediaQuery("(max-width: 700px)");
+
   return (
     <Box
       sx={{

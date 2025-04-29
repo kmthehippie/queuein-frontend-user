@@ -9,12 +9,14 @@ import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import GoogleButton from "../../components/GoogleButton";
 import FacebookButton from "../../components/FacebookButton";
+import useEmailValidation from "../../hooks/EmailValidation";
 
 function Login() {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [loginError, setLoginError] = React.useState(false);
   const [rememberDevice, setRememberDevice] = React.useState(false);
+  const { emailError, emailHelperText, validateEmail } = useEmailValidation();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,6 +27,9 @@ function Login() {
     };
 
     console.log(credentials);
+    if (password.length === 0 || email.length === 0 || email.type) {
+      setLoginError(true);
+    }
     //fetch api login POST. if response is error: setLoginError to "Invalid credentials"
   };
   return (
@@ -99,11 +104,14 @@ function Login() {
 
             <TextField
               variant="standard"
-              id="email"
-              type="email"
               label="Email Address"
+              id="email"
+              error={emailError}
+              helperText={emailHelperText}
+              slotProps={{ input: { type: "email" } }}
               onChange={(e) => {
                 setEmail(e.target.value);
+                validateEmail(e.target.value);
               }}
               required
               autoComplete="email"
@@ -150,7 +158,7 @@ function Login() {
                 type="submit"
                 variant="contained"
                 color="primary"
-                sx={{ width: "100%" }}
+                sx={{ width: "100%", borderRadius: 2 }}
                 onClick={(e) => {
                   handleSubmit(e);
                 }}

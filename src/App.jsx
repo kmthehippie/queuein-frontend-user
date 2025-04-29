@@ -15,6 +15,7 @@ import Error from "./pages/Error";
 import Login from "./pages/pages-db/Login";
 import LayoutDB from "./pages/pages-db/LayoutDB";
 import Register from "./pages/pages-db/Register";
+import GoogleSuccess from "./pages/pages-db/GoogleSuccess";
 import DashboardLayout from "./pages/pages-db/DashboardLayout";
 import Settings from "./pages/pages-db/Settings";
 import NewOutlet from "./pages/pages-db/NewOutlet";
@@ -66,6 +67,7 @@ const router = createBrowserRouter([
     children: [
       { path: "login", element: <Login /> },
       { path: "register", element: <Register /> },
+      { path: "googleSuccess", element: <GoogleSuccess /> },
       { path: "forgotPassword", element: <ForgotPw /> },
       {
         path: "user/:userId",

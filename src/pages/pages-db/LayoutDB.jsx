@@ -30,7 +30,7 @@ function DashboardLayout() {
       <Suspense fallback={<CircularProgress />}>
         <BackgroundImage />
       </Suspense>
-
+      {/* Set my logo here for users to go to "/" */}
       <DashboardContainer>
         <ContentWrapper>
           <Outlet />

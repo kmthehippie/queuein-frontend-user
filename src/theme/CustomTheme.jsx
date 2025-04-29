@@ -20,6 +20,10 @@ const customTheme = createTheme({
       xl: 1536,
     },
   },
+  typography: {
+    fontFamily: "Poppins",
+    fontSize: 11,
+  },
   components: {
     MuiTypography: {
       variants: [
